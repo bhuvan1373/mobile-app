@@ -34,7 +34,7 @@ public class ticketPrice extends AppCompatActivity {
                 double ticketCost = Double.parseDouble(editTextTicketCost.getText().toString());
                 totalTickets += numberOfPersons;
                 textViewTotalTickets.setText("Total Tickets: " + totalTickets + " Cost: RS." + (totalTickets * ticketCost));
-            }
+             }
         });
 
         buttonRemoveTickets.setOnClickListener(new View.OnClickListener() {

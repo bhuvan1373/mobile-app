@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNumberOfPersons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of Persons" />
+
+    <EditText
+        android:id="@+id/editTextTicketCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ticket Cost" />
+
+    <Button
+        android:id="@+id/buttonAddTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Tickets" />
+
+    <Button
+        android:id="@+id/buttonRemoveTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove Tickets" />
+
+    <TextView
+        android:id="@+id/textViewTotalTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Tickets: 0 Cost: $0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

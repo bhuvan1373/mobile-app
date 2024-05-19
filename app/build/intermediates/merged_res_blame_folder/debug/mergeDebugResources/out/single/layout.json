@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\fragment_second.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "com.example.ticket.app-mergeDebugResources-51:/layout/activity_login.xml",
+        "source": "com.example.ticket.app-main-54:/layout/activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\fragment_first.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\activity_ticket_price.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\activity_ticket_price.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\activity_splash_screen.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\content_splash_screen.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\content_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-mergeDebugResources-51:\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\Bhuvan Narayanan\\.gradle\\daemon\\8.4\\com.example.ticket.app-main-54:\\layout\\activity_signup.xml"
+    }
+]
