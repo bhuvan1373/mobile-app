@@ -2,6 +2,7 @@ package com.example.ticket;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,7 +26,6 @@ public class signup extends AppCompatActivity {
     private Button buttonSignUp;
     private FirebaseAuth mAuth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,9 @@ public class signup extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+
+        // Set Firebase Auth language code
+        mAuth.setLanguageCode("en"); // Change to desired locale
 
         // Initialize views
         editTextUserName = findViewById(R.id.editTextUserName);
@@ -79,8 +82,34 @@ public class signup extends AppCompatActivity {
             return;
         }
 
-        // Perform sign up with email or phone number
-        mAuth.createUserWithEmailAndPassword(emailOrPhone, password)
+        // Obtain reCAPTCHA token
+        obtainRecaptchaToken(new RecaptchaTokenCallback() {
+            @Override
+            public void onTokenReceived(String recaptchaToken) {
+                if (!TextUtils.isEmpty(recaptchaToken)) {
+                    createUserWithEmail(emailOrPhone, password, userName, city, recaptchaToken);
+                } else {
+                    Toast.makeText(signup.this, "Failed to get reCAPTCHA token", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void obtainRecaptchaToken(RecaptchaTokenCallback callback) {
+        // This method should implement the reCAPTCHA verification and return the token
+        // For simplicity, let's assume we have a method getRecaptchaToken() that gets the token
+        String recaptchaToken = getRecaptchaToken();
+        callback.onTokenReceived(recaptchaToken);
+    }
+
+    private String getRecaptchaToken() {
+        // Placeholder method to simulate obtaining a reCAPTCHA token
+        // In practice, you would implement the actual reCAPTCHA verification process here
+        return "dummy-recaptcha-token"; // Replace with actual token
+    }
+
+    private void createUserWithEmail(String email, String password, String userName, String city, String recaptchaToken) {
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -97,7 +126,7 @@ public class signup extends AppCompatActivity {
                             // Create a User object or simply a Map with the user's information
                             Map<String, Object> user = new HashMap<>();
                             user.put("username", userName);
-                            user.put("emailOrPhone", emailOrPhone);
+                            user.put("emailOrPhone", email);
                             user.put("city", city);
 
                             // Write the user's information to the Realtime Database
@@ -110,5 +139,10 @@ public class signup extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    // Callback interface for obtaining reCAPTCHA token
+    interface RecaptchaTokenCallback {
+        void onTokenReceived(String recaptchaToken);
     }
 }

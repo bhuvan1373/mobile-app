@@ -21,19 +21,21 @@
         android:id="@+id/buttonAddTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Tickets" />
+        android:text="Add Tickets"
+        android:backgroundTint="@color/orange"/>
 
     <Button
         android:id="@+id/buttonRemoveTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remove Tickets" />
+        android:text="Remove Tickets"
+        android:backgroundTint="@color/orange"/>
 
     <TextView
         android:id="@+id/textViewTotalTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Tickets: 0 Cost: $0"
+        android:text="Total Tickets: 0 Cost: Rs.0"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"/>

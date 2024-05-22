@@ -23,11 +23,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Live Bus"
+        android:text="Ticket"
         android:textSize="5mm"
         app:layout_constraintBottom_toTopOf="@+id/animation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/orange"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

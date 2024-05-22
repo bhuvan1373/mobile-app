@@ -36,22 +36,32 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation("com.airbnb.android:lottie:6.4.0")
-    implementation ("com.google.firebase:firebase-analytics:20.0.0")
-    implementation ("com.google.firebase:firebase-database:20.0.0")
 
+    // Firebase BOM
+    implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
+
+    // Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-storage")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-appcheck")
+
+    // Additional dependencies
+    implementation("com.airbnb.android:lottie:6.4.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.google.firebase:firebase-database:20.0.5")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.database)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }

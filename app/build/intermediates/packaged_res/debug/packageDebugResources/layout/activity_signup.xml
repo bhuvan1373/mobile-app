@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextConfirmPassword"
         android:layout_centerHorizontal="true"
-        android:text="Sign Up" />
+        android:text="Sign Up"
+        android:backgroundTint="@color/orange"/>
 
 </RelativeLayout>

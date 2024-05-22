@@ -5,11 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.ticket.R;
@@ -22,24 +23,34 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button button;
+  public final RecyclerView busStopsRecyclerView;
 
   @NonNull
-  public final ImageView imageView;
+  public final Button button;
 
   @NonNull
   public final ConstraintLayout main;
 
   @NonNull
-  public final TextView textView3;
+  public final Button searchButton;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button button,
-      @NonNull ImageView imageView, @NonNull ConstraintLayout main, @NonNull TextView textView3) {
+  @NonNull
+  public final EditText searchEditText;
+
+  @NonNull
+  public final TextView titleTextView;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView busStopsRecyclerView, @NonNull Button button,
+      @NonNull ConstraintLayout main, @NonNull Button searchButton,
+      @NonNull EditText searchEditText, @NonNull TextView titleTextView) {
     this.rootView = rootView;
+    this.busStopsRecyclerView = busStopsRecyclerView;
     this.button = button;
-    this.imageView = imageView;
     this.main = main;
-    this.textView3 = textView3;
+    this.searchButton = searchButton;
+    this.searchEditText = searchEditText;
+    this.titleTextView = titleTextView;
   }
 
   @Override
@@ -69,28 +80,40 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.busStopsRecyclerView;
+      RecyclerView busStopsRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (busStopsRecyclerView == null) {
+        break missingId;
+      }
+
       id = R.id.button;
       Button button = ViewBindings.findChildViewById(rootView, id);
       if (button == null) {
         break missingId;
       }
 
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
 
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
+      id = R.id.searchButton;
+      Button searchButton = ViewBindings.findChildViewById(rootView, id);
+      if (searchButton == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, button, imageView, main,
-          textView3);
+      id = R.id.searchEditText;
+      EditText searchEditText = ViewBindings.findChildViewById(rootView, id);
+      if (searchEditText == null) {
+        break missingId;
+      }
+
+      id = R.id.titleTextView;
+      TextView titleTextView = ViewBindings.findChildViewById(rootView, id);
+      if (titleTextView == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, busStopsRecyclerView, button,
+          main, searchButton, searchEditText, titleTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

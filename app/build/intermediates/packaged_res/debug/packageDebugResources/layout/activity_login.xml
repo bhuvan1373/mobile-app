@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/logbg"
+    android:paddingTop="120dp"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    >
 
     <TextView
         android:id="@+id/Appname"
@@ -26,7 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="15sp"
         android:contentDescription="login_icon"
-        android:src="@drawable/index"
+        android:src="@drawable/bus_logo"
         tools:ignore="HardcodedText" />
 
     <EditText
@@ -36,7 +40,9 @@
         android:layout_marginTop="24dp"
         android:hint="email"
         android:inputType="textEmailAddress"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:background="@color/white"
+        />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -45,7 +51,8 @@
         android:layout_marginTop="8dp"
         android:hint="password"
         android:inputType="textPassword"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:background="@color/white"/>
 
     <Button
         android:id="@+id/buttonLogin"
@@ -53,7 +60,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="login"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:backgroundTint="@color/orange"/>
 
     <!-- Forgot Password TextView -->
     <TextView
@@ -63,9 +71,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="Forgot Password?"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textStyle="italic"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/textViewSignup"
@@ -74,7 +83,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="Don't have an account? Sign up here."
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textStyle="italic"
         tools:ignore="HardcodedText" />
 

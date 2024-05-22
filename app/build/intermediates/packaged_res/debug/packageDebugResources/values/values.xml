@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="blue">#518ded</color>
+    <color name="border_color">#ff000000</color>
+    <color name="orange">#FE7418</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="recycler_view_item_margin">16dp</dimen>
     <string name="app_name">ticket</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="gcm_defaultSenderId" translatable="false">147047272278</string>
